@@ -24,10 +24,18 @@ const boostrap = async () => {
         }); 
         // use middlewares + routers
         app.use(cors({
-            origin: ['http://hotgirl-back-end.herokuapp.com', 'http://hotgirlsocialnetwork.herokuapp.com/'],
+            origin: ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com'],
             credentials: true,
 
         }));
+        const allowCrossDomain = function(req, res) {
+            res.header('Access-Control-Allow-Origin', 'https://hotgirlsocialnetwork.herokuapp.com');
+            res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+            res.header('Access-Control-Allow-Headers', 'Content-Type');
+        
+        }
+        app.use(allowCrossDomain);
+
         app.use(expressSession({
             secret: 'cobaudeptrai',
             resave: false,

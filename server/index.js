@@ -25,7 +25,7 @@ const boostrap = async () => {
          
         // use middlewares + routers
         app.use(cors({
-            origin: ['http://hotgirl-back-end.herokuapp.com', 'http://hotgirlsocialnetwork.herokuapp.com'],
+            origin: ['https://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com'],
             credentials: true,
 
         }));

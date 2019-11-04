@@ -23,16 +23,15 @@ const boostrap = async () => {
             databaseURL: "https://techkids-hotgirl-2ab39.firebaseio.com",
         }); 
         // use middlewares + routers
-        app.use(cors({
-            origin: ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com'],
-            credentials: true,
-
-        }));
-        app.use(function(req, res, next) {
-            res.header("Access-Control-Allow-Origin", "https://hotgirlsocialnetwork.herokuapp.com"); // update to match the domain you will make the request from
-            res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+        app.use((req, res, next) => {
+            res.header('Access-Control-Allow-Origin', '*');
             next();
           });
+        app.use(cors({
+            origin: '*',
+            credentials: true,
+            // ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com']
+        }));
 
         app.use(expressSession({
             secret: 'cobaudeptrai',

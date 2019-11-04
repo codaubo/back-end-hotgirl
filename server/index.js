@@ -28,9 +28,9 @@ const boostrap = async () => {
             next();
           });
         app.use(cors({
-            origin: '*',
+            origin: ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com', 'localhost'],
             credentials: true,
-            // ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com']
+            
         }));
 
         app.use(expressSession({

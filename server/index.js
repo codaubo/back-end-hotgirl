@@ -27,7 +27,7 @@ const boostrap = async () => {
         headers.append('Access-Control-Allow-Credentials', 'true');
         // use middlewares + routers
         app.use(cors({
-            origin: ['https://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com'],
+            origin: ['https://hotgirl-back-end.herokuapp.com', '//hotgirlsocialnetwork.herokuapp.com'],
             credentials: true,
 
         }));

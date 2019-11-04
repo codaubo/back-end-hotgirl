@@ -18,14 +18,16 @@ const boostrap = async () => {
 
         const serviceAccount = require("./techkids-hotgirl-2ab39-firebase-adminsdk-p82z9-308068b5fb");
 
+        const headers = new Headers();
         admin.initializeApp({
             credential: admin.credential.cert(serviceAccount),
             databaseURL: "https://techkids-hotgirl-2ab39.firebaseio.com",
         }); 
-         
+        headers.append('Access-Control-Allow-Origin', 'https://hotgirlsocialnetwork.herokuapp.com');
+        headers.append('Access-Control-Allow-Credentials', 'true');
         // use middlewares + routers
         app.use(cors({
-            origin: ['https://hotgirl-back-end.herokuapp.com', '//hotgirlsocialnetwork.herokuapp.com'],
+            origin: ['https://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com'],
             credentials: true,
 
         }));

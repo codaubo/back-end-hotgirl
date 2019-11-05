@@ -23,12 +23,8 @@ const boostrap = async () => {
             databaseURL: "https://techkids-hotgirl-2ab39.firebaseio.com",
         }); 
         // use middlewares + routers
-        app.use((req, res, next) => {
-            res.header('Access-Control-Allow-Origin', '*');
-            next();
-          });
         app.use(cors({
-            origin: ['http://hotgirl-back-end.herokuapp.com', 'https://hotgirlsocialnetwork.herokuapp.com', 'localhost'],
+            origin: ['hotgirl-back-end.herokuapp.com', 'hotgirlsocialnetwork.herokuapp.com', 'localhost:3000', 'localhost:3001'],
             credentials: true,
             
         }));

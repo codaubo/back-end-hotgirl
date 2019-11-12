@@ -7,6 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NgoTungDuong/back-end-hotgirl.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NgoTungDuong/back-end-hotgirl/issues"
+  },
+  "homepage": "https://github.com/NgoTungDuong/back-end-hotgirl#readme",
   "author": "",
   "license": "ISC",
   "dependencies": {

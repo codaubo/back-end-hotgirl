@@ -1,4 +1,4 @@
-const express = require('express');
+import express from 'express';
 const bcryptjs = require('bcryptjs');
 const userModel = require('../users/model');
 const authRouter = express();

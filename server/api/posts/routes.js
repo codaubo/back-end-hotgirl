@@ -72,7 +72,7 @@ postRouter.get('/', async (req, res) => {
             })
         }
 
-        if (pageNumber < 1 || pageSize < 1 || pageSize > 20) {
+        if (pageNumber < 1 || pageSize < 1 || pageSize > 100) {
             res.status(500).json({
                 success: false,
                 message: 'pageNumber && pageSize is invalid'
